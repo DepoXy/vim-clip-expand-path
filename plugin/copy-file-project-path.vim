@@ -6,6 +6,14 @@
 
 " +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #
 
+" USAGE:
+"
+" - <leader>j — copy file path relative to .git/ base to clipboard
+"
+" - <leader>J — copy full file path to clipboard
+
+" +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #
+
 " USAGE: Run or uncomment the `unlet`, then press <F9> to source/reload this plugin.
 "     silent! unlet g:plugin_vim_clip_expand_path_copy_file_project_path
 " - HINT: <F9> defined by landonb/dubs_ftype_mess, or run:
@@ -19,14 +27,6 @@ endif
 let g:plugin_vim_clip_expand_path_copy_file_project_path = 1
 
 " +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #
-
-" USAGE:
-"
-" - <leader>j — copy file path relative to .git/ base to clipboard
-"
-" - <leader>J — copy full file path to clipboard
-
-" ***
 
 function! s:SetCurrentFilePathCopyToClipboard_macOS()
   " REFER: ';' postfix *upward search*
