@@ -4,9 +4,18 @@
 
 " Copyright (c) © 2020-2024 Landon Bouma. All Rights Reserved.
 
+" +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #
+
+" USAGE: Run or uncomment the `unlet`, then press <F9> to source/reload this plugin.
+"     silent! unlet g:plugin_vim_clip_expand_path_copy_file_project_path
+" - HINT: <F9> defined by landonb/dubs_ftype_mess, or run:
+"     noremap <silent><buffer> <F9> :exec 'source '.bufname('%')<CR>
+"   https://github.com/landonb/dubs_ftype_mess
+
 if exists("g:plugin_vim_clip_expand_path_copy_file_project_path") || &cp
   finish
 endif
+
 let g:plugin_vim_clip_expand_path_copy_file_project_path = 1
 
 " +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #
