@@ -28,6 +28,29 @@ let g:plugin_vim_clip_expand_path_copy_file_project_path = 1
 
 " +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #
 
+function! DXY_CopyFileProjectPath_NormalizeCurrentFilePath()
+  let l:filepath = expand('%:p')
+
+  let l:filepath = substitute(l:filepath, '^'.$HOME, '~', '')
+
+  " USAGE: If you want to substitute a different path for some results,
+  " you could fork this project, and then add those substitutions here.
+  "
+  " - E.g., if you want <Leader>J to use the symlink path you use to a
+  "   mounted path, rather than the canonical path itself, you could add
+  "   a rule such as this:
+  "
+  "     let l:filepath = substitute(l:filepath, '/Volumes/mounted/path', '~/my/symlink', '')
+  "
+  " INERT/2024-09-18: Use global instead so users don't have to fork,
+  "   e.g., g:vim_clip_expand_path_subs = <path mappings>
+  " - Though not a big deal to just fork this project, either.
+
+  return l:filepath
+endfunction
+
+" ***
+
 function! s:SetCurrentFilePathCopyToClipboard_Unmap()
   nunmap <silent> <leader>j
   iunmap <silent> <leader>j
@@ -52,11 +75,11 @@ function! s:SetCurrentFilePathCopyToClipboard_macOS()
 
   nnoremap <silent> <leader>J :call system(
     \ 'pbcopy',
-    \ substitute(expand('%:p'), '^'.$HOME, '~', '')
+    \ DXY_CopyFileProjectPath_NormalizeCurrentFilePath()
   \ )<CR>
   inoremap <silent> <leader>J <C-O>:call system(
     \ 'pbcopy',
-    \ substitute(expand('%:p'), '^'.$HOME, '~', '')
+    \ DXY_CopyFileProjectPath_NormalizeCurrentFilePath()
   \ )<CR>
 endfunction
 
@@ -74,11 +97,11 @@ function! s:SetCurrentFilePathCopyToClipboard_X11()
 
   nnoremap <silent> <leader>J :call system(
     \ 'xclip -i -selection c',
-    \ substitute(expand('%:p'), '^'.$HOME, '~', '')
+    \ DXY_CopyFileProjectPath_NormalizeCurrentFilePath()
   \ )<CR>
   inoremap <silent> <leader>J <C-O>:call system(
     \ 'xclip -i -selection c',
-    \ substitute(expand('%:p'), '^'.$HOME, '~', '')
+    \ DXY_CopyFileProjectPath_NormalizeCurrentFilePath()
   \ )<CR>
 endfunction
 
