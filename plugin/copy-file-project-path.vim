@@ -28,6 +28,16 @@ let g:plugin_vim_clip_expand_path_copy_file_project_path = 1
 
 " +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #
 
+function! s:SetCurrentFilePathCopyToClipboard_Unmap()
+  nunmap <silent> <leader>j
+  iunmap <silent> <leader>j
+
+  nunmap <silent> <leader>J
+  iunmap <silent> <leader>J
+endfunction
+
+" ***
+
 function! s:SetCurrentFilePathCopyToClipboard_macOS()
   " REFER: ';' postfix *upward search*
   "          :help file-searching
@@ -76,6 +86,8 @@ endfunction
 
 function! s:SetCurrentFilePathCopyToClipboard()
   if ! has("gui_running") | return | endif
+
+  call s:SetCurrentFilePathCopyToClipboard_Unmap()
 
   if has("macunix")
     call s:SetCurrentFilePathCopyToClipboard_macOS()
