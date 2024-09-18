@@ -28,12 +28,9 @@ let g:plugin_vim_clip_expand_path_copy_file_project_path = 1
 
 " ***
 
-" REFER: ';' postfix *upward search*
-"          :help file-searching
-
-" ***
-
 function! s:SetCurrentFilePathCopyToClipboard_macOS()
+  " REFER: ';' postfix *upward search*
+  "          :help file-searching
   nnoremap <silent> <leader>j :call system(
     \ 'pbcopy',
     \ substitute(expand('%:p'), finddir('.git/..', expand('%:p:h').';').'/', '', '')
