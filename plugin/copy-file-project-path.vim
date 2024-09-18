@@ -2,7 +2,7 @@
 " Project: https://github.com/DepoXy/vim-clip-expand-path#👣
 " License: CC0 1.0 <https://creativecommons.org/publicdomain/zero/1.0/>
 
-" Copyright (c) © 2020-2023 Landon Bouma. All Rights Reserved.
+" Copyright (c) © 2020-2024 Landon Bouma. All Rights Reserved.
 
 if exists("g:plugin_vim_clip_expand_path_copy_file_project_path") || &cp
   finish
