@@ -52,11 +52,11 @@ endfunction
 " ***
 
 function! s:SetCurrentFilePathCopyToClipboard_Unmap()
-  nunmap <silent> <leader>j
-  iunmap <silent> <leader>j
+  silent! unmap <silent> <leader>j
+  silent! iunmap <silent> <leader>j
 
-  nunmap <silent> <leader>J
-  iunmap <silent> <leader>J
+  silent! nunmap <silent> <leader>J
+  silent! iunmap <silent> <leader>J
 endfunction
 
 " ***
