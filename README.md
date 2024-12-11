@@ -2,10 +2,6 @@
 
 Two commands to copy current file's path to system clipboard.
 
-### Requirements
-
-None. Uses ``pbcopy`` on macOS, and ``xclip`` on Linux.
-
 ## Commands
 
 Use `<leader>j` and `<leader>J` to copy the current file path:
@@ -17,6 +13,10 @@ Use `<leader>j` and `<leader>J` to copy the current file path:
 - `<leader>J` — Copies full path, using tilde for user home
 
   - E.g., `~/.vim/pack/DepoXy/start/vim-clip-expand-path/doc/vim-clip-expand-path.txt`
+
+## Requirements
+
+None. Uses ``pbcopy`` on macOS, and ``xclip`` on Linux.
 
 ## INSTALL
 
