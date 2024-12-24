@@ -14,13 +14,15 @@
 
 " +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #
 
-" USAGE: Run or uncomment the `unlet`, then press <F9> to source/reload this plugin.
-"     silent! unlet g:plugin_vim_clip_expand_path_copy_file_project_path
-" - HINT: <F9> defined by landonb/dubs_ftype_mess, or run:
-"     noremap <silent><buffer> <F9> :exec 'source '.bufname('%')<CR>
-"   https://github.com/landonb/dubs_ftype_mess
+" GUARD: Press <F9> to reload this plugin (or :source it).
+" - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
 
-if exists("g:plugin_vim_clip_expand_path_copy_file_project_path") || &cp
+if expand('%:p') ==# expand('<sfile>:p')
+  unlet! g:plugin_vim_clip_expand_path_copy_file_project_path
+endif
+
+if exists('g:plugin_vim_clip_expand_path_copy_file_project_path') || &cp
+
   finish
 endif
 
