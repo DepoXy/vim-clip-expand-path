@@ -4,7 +4,7 @@
 
 " Copyright (c) © 2020-2024 Landon Bouma. All Rights Reserved.
 
-" +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #
+" -------------------------------------------------------------------
 
 " USAGE:
 "
@@ -12,7 +12,7 @@
 "
 " - <leader>J — copy full file path to clipboard
 
-" +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #
+" -------------------------------------------------------------------
 
 " GUARD: Press <F9> to reload this plugin (or :source it).
 " - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
@@ -28,7 +28,7 @@ endif
 
 let g:plugin_vim_clip_expand_path_copy_file_project_path = 1
 
-" +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #
+" -------------------------------------------------------------------
 
 function! DXY_CopyFileProjectPath_NormalizeCurrentFilePath()
   let l:filepath = expand('%:p')
