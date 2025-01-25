@@ -110,8 +110,6 @@ endfunction
 " ***
 
 function! s:SetCurrentFilePathCopyToClipboard()
-  if ! has("gui_running") | return | endif
-
   call s:SetCurrentFilePathCopyToClipboard_Unmap()
 
   if has("macunix")
