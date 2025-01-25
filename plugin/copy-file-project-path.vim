@@ -120,6 +120,8 @@ function! s:SetCurrentFilePathCopyToClipboard()
     call s:SetCurrentFilePathCopyToClipboard_X11()
   " elseif has("gui_photon")
   " elseif has("gui_kde")
+  else
+    echom "ALERT: vim-clip-expand-path: Unrecognized Vim distro"
   endif
 endfunction
 
