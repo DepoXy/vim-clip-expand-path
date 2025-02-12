@@ -1,6 +1,6 @@
 *vim-clip-expand-path.txt*             Copy buffer path to clipboard.
 
-vim-clip-expand-path~
+vim-clip-expand-path 👣 ~
                                      *vim-clip-expand-path-author*
 
 Author: Landon Bouma <http://github.com/landonb>
@@ -28,7 +28,7 @@ None. Uses `pbcopy` on macOS, and `xclip` on Linux.
 ===========================================================================
 USAGE                                *vim-clip-expand-path-commands*
 
-vim-clip-expand-path commands~
+vim-clip-expand-path commands ~
 
 Use `<leader>j` and `<leader>J` to copy the current file path:
 
