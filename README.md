@@ -4,13 +4,13 @@ Two commands to copy current file's path to system clipboard.
 
 ## Commands
 
-Use `<leader>j` and `<leader>J` to copy the current file path:
+Use `<LocalLeader>j` and `<LocalLeader>J` to copy the current file path:
 
-- `<leader>j` — Copies path relative to Git project root
+- `<LocalLeader>j` — Copies path relative to Git project root
 
   - E.g., `doc/vim-clip-expand-path.txt`
 
-- `<leader>J` — Copies full path, using tilde for user home
+- `<LocalLeader>J` — Copies full path, using tilde for user home
 
   - E.g., `~/.vim/pack/DepoXy/start/vim-clip-expand-path/doc/vim-clip-expand-path.txt`
 
